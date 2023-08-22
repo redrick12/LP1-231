@@ -1,0 +1,63 @@
+package semana20;
+
+import java.util.ArrayList;
+import java.util.List;
+import javax.naming.NamingEnumeration;
+
+    class questao {
+        private int numero;
+        private String enunciado;
+
+        public questao(int numero, String enunciado) {
+            this.numero = numero;
+            this.enunciado = enunciado;
+        }
+
+        public int getNumero() {
+            return numero;
+        }
+
+        public String getEnunciado() {
+            return enunciado;
+        }
+    }
+
+package semana20;
+
+class questaoV_F extends questao {
+
+    private boolean resposta;
+
+    public questaoV_F(int numero, String enunciado, boolean resposta) {
+        super(numero, enunciado);
+        this.resposta = resposta;
+    }
+
+    public boolean isResposta() {
+        return resposta;
+    }
+}
+package semana20;
+
+import java.util.List;
+
+class questao1Escolha extends questao {
+
+    private List<String> opcoes;
+    private int opcaoResposta;
+
+    public questao1Escolha(int numero, String enunciado, List<String> opcoes, int opcaoResposta) {
+
+        super(numero, enunciado);
+        this.opcoes = opcoes;
+        this.opcaoResposta = opcaoResposta;
+    }
+
+    public List<String> getOpcoes() {
+        return opcoes;
+    }
+
+    public int getOpcaoResposta() {
+        return opcaoResposta;
+    }
+}
